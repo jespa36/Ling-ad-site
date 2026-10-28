@@ -1,11 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-  images: {
-    unoptimized: true,
-  },
+  output: 'export',
+  basePath: '/Ling-ad-site',
+  trailingSlash: true,
+  images: { unoptimized: true },
 }
 
 export default nextConfig
