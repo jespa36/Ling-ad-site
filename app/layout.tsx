@@ -1,4 +1,4 @@
-import { Analytics } from '@vercel/analytics/next'
+//tsx Root layout for the LinguaChicago app
 import type { Metadata, Viewport } from 'next'
 import { Fraunces, Inter } from 'next/font/google'
 import './globals.css'
@@ -10,7 +10,6 @@ export const metadata: Metadata = {
   title: 'LinguaChicago — Language Equity & Visibility Map',
   description:
     'An interactive map of language equity in Chicago: compare the languages residents speak with the languages visible in public space across all 77 community areas.',
-  generator: 'v0.app',
   icons: {
     icon: [
       {
@@ -44,7 +43,6 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} ${fraunces.variable}`}>
       <body className="font-sans antialiased">
         {children}
-        {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>
   )
